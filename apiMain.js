@@ -1,4 +1,4 @@
-const aplication = document.querySelector('.container')
+const application = document.querySelector('.container')
 
 const url = 'https://jsonplaceholder.typicode.com/users'
 
@@ -6,7 +6,9 @@ fetch(url)
 .then(response => response.json())
 .then(data => {
   data.forEach(item => {
-    console.log(item.name)
+    const p = document.createElement('p')
+    p.innerHTML = item.name
+    application.appendChild(p)
   });
 })
 .catch(error => console.log(error))
