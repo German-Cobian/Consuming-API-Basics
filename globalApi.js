@@ -7,6 +7,7 @@ fetch(url)
 .then(data => {
   data.forEach(item => {
     const p = document.createElement('p')
+    p.setAttribute('id', item.id)
     p.innerHTML = item.name
     application.appendChild(p)
   });
