@@ -9,6 +9,9 @@ fetch(url)
     const p = document.createElement('p')
     p.setAttribute('id', item.id)
     p.innerHTML = item.name
+    p.addEventListener('click', function(){
+      window.location.href = `./item.html?id=${item.id}`
+    })
     application.appendChild(p)
   });
 })
